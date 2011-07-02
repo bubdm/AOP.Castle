@@ -1,0 +1,10 @@
+C:\Dev\AOP.Castle\AOP.Castle\bin\Debug\AOP.Castle.dll
+C:\Dev\AOP.Castle\AOP.Castle\bin\Debug\AOP.Castle.pdb
+C:\Dev\AOP.Castle\AOP.Castle\bin\Debug\Castle.Core.dll
+C:\Dev\AOP.Castle\AOP.Castle\bin\Debug\Castle.Windsor.dll
+C:\Dev\AOP.Castle\AOP.Castle\bin\Debug\Castle.Core.xml
+C:\Dev\AOP.Castle\AOP.Castle\bin\Debug\Castle.Windsor.pdb
+C:\Dev\AOP.Castle\AOP.Castle\bin\Debug\Castle.Windsor.xml
+C:\Dev\AOP.Castle\AOP.Castle\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\AOP.Castle\AOP.Castle\obj\Debug\AOP.Castle.dll
+C:\Dev\AOP.Castle\AOP.Castle\obj\Debug\AOP.Castle.pdb
