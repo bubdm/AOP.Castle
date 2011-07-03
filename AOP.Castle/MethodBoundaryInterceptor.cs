@@ -23,20 +23,40 @@ namespace AOP.Castle
             }
             else
             {
-                InvokeEntry(attributes);
+                MethodExecutionArgs args = new MethodExecutionArgs(
+                    invocation.InvocationTarget, invocation.Method, invocation.Arguments);
+
+                InvokeEntry(attributes, args);
+
                 try
                 {
-                    invocation.Proceed();
-                    InvokeSuccess(attributes);
+                    if (args.FlowBehavior == FlowBehavior.Return)
+                        invocation.ReturnValue = args.ReturnValue;
+                    else
+                        invocation.Proceed();
+
+                    args.ReturnValue = invocation.ReturnValue;
+
+                    InvokeSuccess(attributes, args);
                 }
                 catch (Exception err)
                 {
-                    InvokeException(attributes, err);
-                    throw;
+                    args.Exception = err;
+
+                    InvokeException(attributes, args);
+
+                    if (args.FlowBehavior == FlowBehavior.Return)
+                    {
+                        invocation.ReturnValue = args.ReturnValue;
+                        return;
+                    }
+
+                    if (args.FlowBehavior != FlowBehavior.Continue)
+                        throw err;
                 }
                 finally
                 {
-                    InvokeExit(attributes);
+                    InvokeExit(attributes, args);
                 }
             }
         }
@@ -70,35 +90,35 @@ namespace AOP.Castle
             return attributes;
         }
 
-        private void InvokeEntry(List<MethodBoundaryAttribute> attributes)
+        private void InvokeEntry(List<MethodBoundaryAttribute> attributes, MethodExecutionArgs args)
         {
             foreach (MethodBoundaryAttribute attr in attributes)
             {
-                attr.OnEntry();
+                attr.OnEntry(args);
             }
         }
 
-        private void InvokeException(List<MethodBoundaryAttribute> attributes, Exception exp)
+        private void InvokeException(List<MethodBoundaryAttribute> attributes, MethodExecutionArgs args)
         {
             foreach (MethodBoundaryAttribute attr in attributes)
             {
-                attr.OnException(exp);
+                attr.OnException(args);
             }
         }
 
-        private void InvokeExit(List<MethodBoundaryAttribute> attributes)
+        private void InvokeExit(List<MethodBoundaryAttribute> attributes, MethodExecutionArgs args)
         {
             foreach (MethodBoundaryAttribute attr in attributes)
             {
-                attr.OnExit();
+                attr.OnExit(args);
             }
         }
 
-        private void InvokeSuccess(List<MethodBoundaryAttribute> attributes)
+        private void InvokeSuccess(List<MethodBoundaryAttribute> attributes, MethodExecutionArgs args)
         {
             foreach (MethodBoundaryAttribute attr in attributes)
             {
-                attr.OnSuccess();
+                attr.OnSuccess(args);
             }
         }
     }

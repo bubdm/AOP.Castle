@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\AbortOnEntryAttribute.cs" />
     <Compile Include="Attributes\Test1Attribute.cs" />
     <Compile Include="Attributes\Test2Attribute.cs" />
     <Compile Include="Attributes\Test3Attribute.cs.cs" />

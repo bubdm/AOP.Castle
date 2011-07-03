@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1010]C:\dev\AOP.Castle\AOP.Castle.Tests\bin\Debug\AOP.Castle.Tests.dll</TopNode>
-  <SelectedNode>[0-1010]C:\dev\AOP.Castle\AOP.Castle.Tests\bin\Debug\AOP.Castle.Tests.dll</SelectedNode>
+  <TopNode>[0-1011]C:\dev\AOP.Castle\AOP.Castle.Tests\bin\Debug\AOP.Castle.Tests.dll</TopNode>
+  <SelectedNode>[0-1011]C:\dev\AOP.Castle\AOP.Castle.Tests\bin\Debug\AOP.Castle.Tests.dll</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1010]C:\dev\AOP.Castle\AOP.Castle.Tests\bin\Debug\AOP.Castle.Tests.dll" Expanded="true" />
-    <Node UniqueName="[0-1011]AOP" Expanded="true" />
-    <Node UniqueName="[0-1012]AOP.Castle" Expanded="true" />
+    <Node UniqueName="[0-1011]C:\dev\AOP.Castle\AOP.Castle.Tests\bin\Debug\AOP.Castle.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1012]AOP" Expanded="true" />
+    <Node UniqueName="[0-1013]AOP.Castle" Expanded="true" />
     <Node UniqueName="[0-1000]AOP.Castle.Tests.AssemblySetup" Expanded="true" />
     <Node UniqueName="[0-1001]AOP.Castle.Tests.MethodBoundaryAspectTests" Expanded="true" />
   </Nodes>

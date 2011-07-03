@@ -6,32 +6,33 @@ using AOP.Castle.Tests.Helpers;
 
 namespace AOP.Castle.Tests.Attributes
 {
-    public class Test3Attribute : MethodBoundaryAttribute
+    public class AbortOnEntryAttribute : MethodBoundaryAttribute
     {
-        public string Level { get; set; }
-
         public override void OnEntry(MethodExecutionArgs args)
         {
+            args.FlowBehavior = FlowBehavior.Return;
+            args.ReturnValue = "abort return value";
+
             MethodBoundaryTestHelper.EntryCount++;
-            Console.WriteLine("Test 3 - Entry - " + Level);
+            Console.WriteLine("AbortOnEntry - Entry");
         }
 
         public override void OnExit(MethodExecutionArgs args)
         {
             MethodBoundaryTestHelper.Exit++;
-            Console.WriteLine("Test 3 - Exit - " + Level);
+            Console.WriteLine("AbortOnEntry - Exit");
         }
 
         public override void OnException(MethodExecutionArgs args)
         {
             MethodBoundaryTestHelper.Exception++;
-            Console.WriteLine("Test 3 - Exception - " + Level);
+            Console.WriteLine("AbortOnEntry - Exception");
         }
 
         public override void OnSuccess(MethodExecutionArgs args)
         {
             MethodBoundaryTestHelper.SuccessCount++;
-            Console.WriteLine("Test 3 - Success - " + Level);
+            Console.WriteLine("AbortOnEntry - Success");
         }
     }
- }
+}

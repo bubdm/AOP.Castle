@@ -130,5 +130,20 @@ namespace AOP.Castle.Tests
             Assert.AreEqual(2, MethodBoundaryTestHelper.Exit);
             Assert.AreEqual(0, MethodBoundaryTestHelper.Exception);
         }
+
+        [Test]
+        public void Method_with_two_attributes_one_abort_on_entry()
+        {
+            ITestService productService = ServiceLocator.Current.GetInstance<ITestService>();
+            MethodBoundaryTestHelper.Reset();
+
+            object ret = productService.MethodTwoAttributesOneAbortOnEntry("Dan", 5);
+
+            Assert.AreEqual(3, MethodBoundaryTestHelper.EntryCount);
+            Assert.AreEqual(3, MethodBoundaryTestHelper.SuccessCount);
+            Assert.AreEqual(3, MethodBoundaryTestHelper.Exit);
+            Assert.AreEqual(0, MethodBoundaryTestHelper.Exception);
+            Assert.AreEqual("abort return value", ret);
+        }
     }
 }

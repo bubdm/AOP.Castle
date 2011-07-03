@@ -15,5 +15,6 @@ namespace AOP.Castle.Tests.Services
         bool MethodWithoutAttributes(string name, int val);
         bool MethodWithSameAttributeInClassAndMethod(string name, int val);
         bool MethodWithTwoAttributesOneDupFromClassLevel(string name, int val);
+        object MethodTwoAttributesOneAbortOnEntry(string name, int val);
     }
 }

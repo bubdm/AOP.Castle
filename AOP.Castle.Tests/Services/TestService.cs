@@ -57,5 +57,12 @@ namespace AOP.Castle.Tests.Services
         {
             return true;
         }
+
+        [Test1]
+        [AbortOnEntry]
+        public object MethodTwoAttributesOneAbortOnEntry(string name, int val)
+        {
+            throw new Exception();
+        }
     }
 }

@@ -49,6 +49,7 @@
     <Compile Include="AspectFacility.cs" />
     <Compile Include="MethodBoundaryAttribute.cs" />
     <Compile Include="MethodBoundaryInterceptor.cs" />
+    <Compile Include="MethodExecutionArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
