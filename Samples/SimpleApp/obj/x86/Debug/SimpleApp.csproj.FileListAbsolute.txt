@@ -1,0 +1,13 @@
+C:\dev\AOP.Castle\Samples\SimpleApp\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\dev\AOP.Castle\Samples\SimpleApp\bin\Debug\SimpleApp.exe
+C:\dev\AOP.Castle\Samples\SimpleApp\bin\Debug\SimpleApp.pdb
+C:\dev\AOP.Castle\Samples\SimpleApp\bin\Debug\Castle.Core.dll
+C:\dev\AOP.Castle\Samples\SimpleApp\bin\Debug\Castle.Core.xml
+C:\dev\AOP.Castle\Samples\SimpleApp\obj\x86\Debug\SimpleApp.exe
+C:\dev\AOP.Castle\Samples\SimpleApp\obj\x86\Debug\SimpleApp.pdb
+C:\dev\AOP.Castle\Samples\SimpleApp\bin\Debug\SimpleApp.exe.config
+C:\dev\AOP.Castle\Samples\SimpleApp\bin\Debug\AOP.Castle.dll
+C:\dev\AOP.Castle\Samples\SimpleApp\bin\Debug\Castle.Windsor.dll
+C:\dev\AOP.Castle\Samples\SimpleApp\bin\Debug\AOP.Castle.pdb
+C:\dev\AOP.Castle\Samples\SimpleApp\bin\Debug\Castle.Windsor.pdb
+C:\dev\AOP.Castle\Samples\SimpleApp\bin\Debug\Castle.Windsor.xml

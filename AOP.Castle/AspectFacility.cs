@@ -19,16 +19,10 @@ namespace AOP.Castle
                                      .ImplementedBy<MethodBoundaryInterceptor>()
                                      .Named(typeof(MethodBoundaryInterceptor).Name)
                                      .LifeStyle.Is(LifestyleType.Singleton));
-            Kernel.ComponentRegistered += KernelComponentRegistered;
+            Kernel.ComponentRegistered += AddMethodBoundaryInterceptorIfNeeded;
         }
 
-        private void KernelComponentRegistered(string key, IHandler handler)
-        {
-            AddMethodBoundaryInterceptorIfNeeded(handler);
-        }
-
-        #region MethodBoundaryInterceptor
-        private void AddMethodBoundaryInterceptorIfNeeded(IHandler handler)
+        private void AddMethodBoundaryInterceptorIfNeeded(string key, IHandler handler)
         {
             List<Attribute> attributes = GetMethodBoundaryAttributes(handler);
 
@@ -53,6 +47,5 @@ namespace AOP.Castle
 
             return attributes;
         }
-        #endregion
     }
 }

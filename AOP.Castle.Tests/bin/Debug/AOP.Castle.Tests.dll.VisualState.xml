@@ -7,7 +7,7 @@
     <Node UniqueName="[0-1011]C:\dev\AOP.Castle\AOP.Castle.Tests\bin\Debug\AOP.Castle.Tests.dll" Expanded="true" />
     <Node UniqueName="[0-1012]AOP" Expanded="true" />
     <Node UniqueName="[0-1013]AOP.Castle" Expanded="true" />
-    <Node UniqueName="[0-1000]AOP.Castle.Tests.AssemblySetup" Expanded="true" />
-    <Node UniqueName="[0-1001]AOP.Castle.Tests.MethodBoundaryAspectTests" Expanded="true" />
+    <Node UniqueName="[0-1010]AOP.Castle.Tests.AssemblySetup" Expanded="true" />
+    <Node UniqueName="[0-1000]AOP.Castle.Tests.MethodBoundaryAspectTests" Expanded="true" />
   </Nodes>
 </VisualState>
